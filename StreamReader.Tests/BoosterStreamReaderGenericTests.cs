@@ -18,7 +18,7 @@ namespace StreamReader.Tests
         [Fact]
         public void ReaderStreamInfoResult_Negative_constractor_param_input_NoException_Test()
         {
-            BoosterStreamReader boosterStreamReader = new BoosterStreamReader(-1);
+            BoosterStreamReaderGeneric boosterStreamReader = new BoosterStreamReaderGeneric(-1);
 
             var exception = Record.Exception(() => boosterStreamReader.GetStreamInfo());
             Assert.Null(exception);
@@ -29,12 +29,12 @@ namespace StreamReader.Tests
         [Fact]
         public void ReaderStreamInfoResult_has_result_have_values_NoException_Test()
         {
-            BoosterStreamReader boosterStreamReader = new BoosterStreamReader();
+            BoosterStreamReaderGeneric boosterStreamReader = new BoosterStreamReaderGeneric();
 
             var res = boosterStreamReader.GetStreamInfo();
 
-            Assert.NotEqual(0, res.Result.WordsCount);
-            Assert.NotEqual(0, res.Result.CharactersCount);
+            Assert.NotEqual(0, ((StreamInfo)res.Result).WordsCount);
+            Assert.NotEqual(0, ((StreamInfo)res.Result).CharactersCount);
         }
 
 

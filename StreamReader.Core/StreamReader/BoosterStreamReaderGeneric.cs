@@ -1,7 +1,5 @@
 ﻿namespace StreamReader.Core
 {
-
-
     public class BoosterStreamReaderGeneric : IStreamReaderCommonGeneric
     {
         private const int DefaultBytesNumber = 104857;// works
