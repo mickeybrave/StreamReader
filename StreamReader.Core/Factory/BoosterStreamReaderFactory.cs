@@ -1,19 +1,5 @@
 ﻿namespace StreamReader.Core
 {
-    public enum CalculationTypes
-    {
-        StreamInfo,
-        CharInfo,
-        LargestWord,
-        SmallestWord,
-        MostFrequentlyAppearingWord
-    }
-
-    public interface IBoosterStreamReadeFactory
-    {
-        IStreamInfoCalculator GetCalculator(CalculationTypes calculationTypes, int counter = 0);
-    }
-
     public class BoosterStreamReaderFactory : IBoosterStreamReadeFactory
     {
         public IStreamInfoCalculator GetCalculator(CalculationTypes calculationTypes,

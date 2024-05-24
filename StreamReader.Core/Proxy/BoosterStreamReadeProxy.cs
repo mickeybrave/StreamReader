@@ -1,15 +1,8 @@
 ﻿namespace StreamReader.Core
 {
-    public interface IBoosterStreamReaderProxy
-    {
-        ReaderResult<IStreamInfo> GetInfo(IStreamInfoCalculator streamInfoCalculator);
-    }
-
     public class BoosterStreamReaderProxy : IBoosterStreamReaderProxy
     {
-        private readonly ITextProcessor _textProcessor;
         private readonly string _text;
-
         public BoosterStreamReaderProxy(string text)
         {
             _text = text;
@@ -25,7 +18,7 @@
                     {
                         Error = new Error
                         {
-                            Message = "streamInfoCalculator cannot be empty"
+                            Message = $"{nameof(streamInfoCalculator)} cannot be empty"
                         }
                     };
                 }
@@ -58,5 +51,4 @@
             }
         }
     }
-
 }

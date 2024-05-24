@@ -1,6 +1,5 @@
 ﻿namespace StreamReader.Core
 {
-
     public interface IStreamReaderCommonGeneric
     {
         ReaderResult<IStreamInfo> GetStreamInfo();

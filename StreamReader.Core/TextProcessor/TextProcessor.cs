@@ -2,10 +2,6 @@
 
 namespace StreamReader.Core
 {
-    public interface ITextProcessor
-    {
-        string GetText(int bytesToBuffer);
-    }
     public class TextProcessor : ITextProcessor
     {
         public string GetText(int bytesToBuffer)
@@ -18,6 +14,4 @@ namespace StreamReader.Core
             }
         }
     }
-
-
 }

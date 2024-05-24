@@ -1,11 +1,8 @@
-﻿
-namespace StreamReader.Core
+﻿namespace StreamReader.Core
 {
     public class LargestWordCalculator : IStreamInfoCalculator
     {
         private readonly int _counter;
-        private const int DefaultCountLargestWords = 5;
-
         public LargestWordCalculator(int counter)
         {
             _counter = counter;

@@ -2,7 +2,10 @@
 {
     public class BoosterStreamReaderGeneric : IStreamReaderCommonGeneric
     {
-        private const int DefaultBytesNumber = 100000;// works
+        /// <summary>
+        /// There is a problem in in WordStream --> Read(). if the requested number of bytes/characters is too long, the method execution is frozen and does not execute. According to my observation it is not safe to request more than 100000. The number of character that makes the method frozen is not consistent.
+        /// </summary>
+        private const int DefaultBytesNumber = 100000;
 
         private readonly int _bytes;
         private readonly ITextProcessor _textProcessor;
