@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace StreamReader.Core
 {
@@ -18,7 +14,7 @@ namespace StreamReader.Core
             {
                 byte[] buffer = new byte[bytesToBuffer]; // works
                 var bytesRead = stream.Read(buffer, 0, buffer.Length);
-                return System.Text.Encoding.Default.GetString(buffer);
+                return Encoding.Default.GetString(buffer);
             }
         }
     }
