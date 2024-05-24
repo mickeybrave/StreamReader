@@ -6,7 +6,7 @@ namespace StreamReader.Tests
     public class BoosterStreamReadeFactoryTests
     {
 
-        private readonly BoosterStreamReadeFactory _factory = new BoosterStreamReadeFactory();
+        private readonly BoosterStreamReaderFactory _factory = new BoosterStreamReaderFactory();
 
         [Fact]
         public void BoosterStreamReadeFactory_GetCalculator_Validate_CharInfo_return_type()

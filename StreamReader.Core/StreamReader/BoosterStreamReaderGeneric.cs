@@ -2,7 +2,7 @@
 {
     public class BoosterStreamReaderGeneric : IStreamReaderCommonGeneric
     {
-        private const int DefaultBytesNumber = 104857;// works
+        private const int DefaultBytesNumber = 100000;// works
 
         private readonly int _bytes;
         private readonly ITextProcessor _textProcessor;
@@ -14,7 +14,7 @@
             _bytes = DefaultBytesNumber;
             _textProcessor = new TextProcessor();
             _boosterStreamReadeProxy = new BoosterStreamReaderProxy(_textProcessor.GetText(_bytes));
-            _boosterStreamReadeFactory = new BoosterStreamReadeFactory();
+            _boosterStreamReadeFactory = new BoosterStreamReaderFactory();
         }
         public BoosterStreamReaderGeneric(int bytes,
             ITextProcessor textProcessor,
@@ -32,7 +32,7 @@
             _bytes = bytes <= 0 ? DefaultBytesNumber : bytes;
             _textProcessor = new TextProcessor();
             _boosterStreamReadeProxy = new BoosterStreamReaderProxy(_textProcessor.GetText(_bytes));
-            _boosterStreamReadeFactory = new BoosterStreamReadeFactory();
+            _boosterStreamReadeFactory = new BoosterStreamReaderFactory();
         }
 
         public ReaderResult<IStreamInfo> GetStreamInfo()

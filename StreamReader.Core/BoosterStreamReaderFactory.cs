@@ -14,7 +14,7 @@
         IStreamInfoCalculator GetCalculator(CalculationTypes calculationTypes, int counter = 0);
     }
 
-    public class BoosterStreamReadeFactory : IBoosterStreamReadeFactory
+    public class BoosterStreamReaderFactory : IBoosterStreamReadeFactory
     {
         public IStreamInfoCalculator GetCalculator(CalculationTypes calculationTypes,
             int counter = 0)
