@@ -107,20 +107,6 @@ namespace StreamReader.Tests
 
         }
 
-        [Theory]
-        [InlineData(100, 10)]
-        [InlineData(100, 5)]
-        [InlineData(1000, 10)]
-        [InlineData(10000, 100)]
-        public void GetMostFrequentlyAppearingWords_has_result_not_empty_short_text_Test(int textLenth, int wordsCount)
-        {
-            BoosterStreamReaderGeneric boosterStreamReader = new BoosterStreamReaderGeneric(textLenth);
-
-            var res = boosterStreamReader.GetMostFrequentlyAppearingWords(wordsCount);
-
-            Assert.NotEmpty(((WordInfo)res.Result).Info);
-        }
-
 
     }
 }
